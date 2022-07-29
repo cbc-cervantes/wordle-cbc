@@ -31,7 +31,7 @@ function App() {
   }, [darkMode]);
 
   useEffect(() => {
-    if (remainTime.minSec.min < 1) {
+    if (remainTime.minSec.min < 1 && remainTime.minSec.sec < 1) {
       dispatch(setWord());
     }
   }, [remainTime, dispatch]);
